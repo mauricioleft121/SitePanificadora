@@ -144,7 +144,7 @@ const Pagamento: React.FC = () => {
           </div>
           {Pag ? (
             <a
-              href={`https://web.whatsapp.com/send?1=pt_BR&phone=55032984024112&text=${text}`}
+              href={`https://api.whatsapp.com/send?phone=55032984024112&text=${text}`}
               target="_blank"
               rel="noreferrer"
             >
@@ -157,7 +157,7 @@ const Pagamento: React.FC = () => {
             <a href="/" onClick={(e) => e.preventDefault()}>
               <button type="button" disabled>
                 <WhatsAppIcon />
-                Enviar Mensagem
+                Enviar Pedido
               </button>
             </a>
           )}
