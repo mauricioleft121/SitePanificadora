@@ -1,7 +1,8 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'https://server-panificadora-ubaense.herokuapp.com',
+  /* baseURL: 'http://localhost:3333', */
+  baseURL: 'https://server.panificadoraubaense.com.br',
 });
 
 export default api;

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { lighten, shade } from 'polished';
+import { lighten } from 'polished';
 
 export const HeaderStyle = styled.header`
   padding-top: 22px;

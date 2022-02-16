@@ -39,15 +39,11 @@ const Header: React.FC = () => {
             <strong>Início</strong>
           </Link>
           <div />
-          <Link to="produtos">
-            <strong>Produtos</strong>
-          </Link>
-          <div />
-          <Link to="/">
+          <Link to="galeria">
             <strong>Galeria</strong>
           </Link>
           <div />
-          <Link to="/">
+          <Link to="contato">
             <strong>Contato</strong>
           </Link>
           <div />

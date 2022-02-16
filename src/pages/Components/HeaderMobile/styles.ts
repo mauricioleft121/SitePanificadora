@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const HeaderStyle = styled.div`
   header {
     background-color: #823d14;
+    border-bottom: 2px solid #e5e5e5;
 
     div {
       justify-content: space-between;

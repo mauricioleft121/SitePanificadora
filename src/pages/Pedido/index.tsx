@@ -26,7 +26,7 @@ interface Info {
 }
 
 const Pedido: React.FC = () => {
-  const [Cli] = useState<Info>(() => {
+  const [Cli] = useState(() => {
     const storagedProds = sessionStorage.getItem(
       '@PanificadoraUbaense/Cliente',
     );
@@ -37,45 +37,52 @@ const Pedido: React.FC = () => {
     return [];
   });
   const [Rua, setRua] = useState(() => {
-    if (Cli.Rua !== '') {
+    if (Cli.length !== 0) {
       return Cli.Rua;
     }
+
     return '';
   });
   const [Numero, setNumero] = useState(() => {
-    if (Cli.Numero !== '') {
+    if (Cli.length !== 0) {
       return Cli.Numero;
     }
+
     return '';
   });
   const [Bairro, setBairro] = useState(() => {
-    if (Cli.Bairro !== '') {
+    if (Cli.length !== 0) {
       return Cli.Bairro;
     }
+
     return '';
   });
   const [Complemento, setComplemento] = useState(() => {
-    if (Cli.Complemento !== '') {
+    if (Cli.length !== 0) {
       return Cli.Complemento;
     }
+
     return '';
   });
   const [Referencia, setReferencia] = useState(() => {
-    if (Cli.Referencia !== '') {
+    if (Cli.length !== 0) {
       return Cli.Referencia;
     }
+
     return '';
   });
   const [Nome, setNome] = useState(() => {
-    if (Cli.Nome !== '') {
+    if (Cli.length !== 0) {
       return Cli.Nome;
     }
+
     return '';
   });
   const [Telefone, setTelefone] = useState(() => {
-    if (Cli.Telefone !== '') {
+    if (Cli.length !== 0) {
       return Cli.Telefone;
     }
+
     return '';
   });
 

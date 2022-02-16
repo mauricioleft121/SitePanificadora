@@ -24,6 +24,7 @@ export const Prods = styled.div`
   }
 
   button {
+    cursor: default !important;
     background: #f3f3f3;
     border-radius: 5px;
     border: 1px solid #e0e0e0;
@@ -50,13 +51,22 @@ export const Prods = styled.div`
       margin-top: 16px;
     }
     button {
+      cursor: pointer !important;
       border-radius: 0;
       border: 0;
       width: 0px;
+      margin-right: 10px;
       padding: 0;
       text-decoration: none;
       margin-top: 0;
       align-self: center;
+
+      @media (max-width: 320px) {
+        margin-right: 0;
+      }
+      @media (max-width: 768px) {
+        padding-left: 20px;
+      }
       svg {
         color: #3d3d4d;
 
@@ -87,11 +97,11 @@ export const Prods = styled.div`
     flex: 1;
     padding-top: 10px;
     @media (max-width: 425px) {
-      margin: 10px 16px 0;
+      margin: 10px 0px 0;
       padding-top: 10px;
     }
     @media (max-width: 320px) {
-      margin: 15px 16px 0;
+      margin: 5px 0px 0;
     }
     strong {
       @media (max-width: 576px) {
@@ -122,6 +132,7 @@ export const Prods = styled.div`
 export const Total = styled.span`
   align-self: center;
   flex: 0.3;
+  margin-bottom: 15px;
 
   @media (max-width: 576px) {
     margin-top: 0px;
@@ -154,7 +165,7 @@ export const Quant = styled.span`
     margin-right: 50px;
   }
   @media (max-width: 425px) {
-    margin-right: 40px;
+    margin-right: 0px;
   }
   @media (max-width: 375px) {
     margin-right: 0px;
@@ -169,22 +180,40 @@ export const Quant = styled.span`
     width: 160px;
     max-height: 40px;
     padding-top: 0;
-
-    @media (max-width: 425px) {
-      padding-top: 0;
-    }
+    align-self: center;
 
     @media (max-width: 576px) {
       width: 140px;
     }
     @media (max-width: 425px) {
-      width: 90px;
+      width: 130px;
+      padding-top: 0;
+      margin: 1rem 0px 0;
+    }
+    @media (max-width: 375px) {
+      width: 110px;
+    }
+    @media (max-width: 320px) {
+      width: 100px;
     }
 
     button {
+      cursor: pointer !important;
       background-color: transparent;
       border: 0px;
-      padding: 24px;
+      padding: 8px 22px;
+
+      &:hover > strong {
+        color: ${lighten(0.2, '#823d14')};
+      }
+
+      @media (max-width: 425px) {
+        padding: 20px;
+      }
+
+      @media (max-width: 375px) {
+        padding: 15px;
+      }
 
       strong {
         color: #823d14;
@@ -280,6 +309,88 @@ export const NoProds = styled.div`
     }
     @media (max-width: 320px) {
       font-size: 20px;
+    }
+  }
+`;
+
+export const QuantKilo = styled.span`
+  align-self: center;
+  margin-right: 20px;
+
+  @media (max-width: 576px) {
+    margin-right: 50px;
+  }
+  @media (max-width: 425px) {
+    margin-right: 0px;
+  }
+  @media (max-width: 375px) {
+    margin-right: 0px;
+  }
+  @media (max-width: 320px) {
+    margin-right: 0px;
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+    width: 160px;
+    height: 40px;
+    padding-top: 0;
+    align-self: center;
+
+    @media (max-width: 576px) {
+      width: 140px;
+    }
+    @media (max-width: 425px) {
+      width: 130px;
+      padding-top: 0;
+      margin: 1rem 0px 0;
+    }
+    @media (max-width: 375px) {
+      width: 110px;
+    }
+    @media (max-width: 320px) {
+      width: 100px;
+    }
+
+    input {
+      max-width: 100%;
+      height: 100%;
+      font-size: 20px;
+      font-weight: 600;
+      background-color: #f3f3f3;
+      border: 1px solid #e0e0e0;
+      border-radius: 5px;
+      text-align: center;
+      transition: all 0.2s;
+      color: #3d3d4d;
+
+      @media (max-width: 576px) {
+        font-size: 20px;
+      }
+      @media (max-width: 425px) {
+        font-size: 18px;
+      }
+      @media (max-width: 375px) {
+        font-size: 18px;
+      }
+      @media (max-width: 320px) {
+        font-size: 16px;
+      }
+
+      &:hover {
+        border-color: ${shade(0.1, '#e0e0e0')};
+      }
+    }
+  }
+  p {
+    margin: 0 20px;
+    color: #a8a8b3;
+    font-weight: 300;
+    font-size: 14px;
+
+    @media (max-width: 576px) {
+      margin: 0 10px;
     }
   }
 `;

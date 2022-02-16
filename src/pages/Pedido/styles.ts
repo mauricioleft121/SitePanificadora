@@ -21,14 +21,24 @@ export const Body = styled.div`
   border-radius: 10px;
   border: 4px solid #823d14;
 
-  @media (min-width: 320px) {
-    width: 320px;
-  }
-  @media (min-width: 375px) {
-    width: 350px;
-  }
-  @media (min-width: 768px) {
+  @media (max-width: 768px) {
+    margin-top: 30px;
     width: 500px;
+  }
+  @media (max-width: 425px) {
+    width: 350px;
+    height: 420px;
+    margin-top: 30px;
+  }
+  @media (max-width: 375px) {
+    width: 350px;
+    height: 420px;
+    margin-top: 30px;
+  }
+  @media (max-width: 320px) {
+    width: 320px;
+    height: 400px;
+    margin-top: 30px;
   }
 `;
 export const Titulo = styled.h1`
@@ -140,13 +150,12 @@ export const Button = styled.div`
   justify-content: center;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  margin-top: 20px;
   background-color: #fff;
   width: 100%;
   height: 100px;
   border-radius: 10px;
   align-items: center;
+  margin-top: auto;
 `;
 
 export const Disable = styled.div`

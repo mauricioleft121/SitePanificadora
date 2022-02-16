@@ -13,6 +13,9 @@ export const Prods = styled.div`
       grid-template-columns: repeat(2, 475px);
       column-gap: 50px;
     }
+    @media (max-width: 1000px) {
+      grid-template-columns: repeat(1, 550px);
+    }
     @media (max-width: 768px) {
       grid-template-columns: repeat(1, 550px);
     }
@@ -34,17 +37,16 @@ export const ListProds = styled.li`
   margin-top: 16px;
   flex: 1;
 
-  a {
+  button {
     background: #fff;
     width: 100%;
     padding: 24px;
     text-decoration: none;
     border: 1px solid #e0e0e0;
     border-radius: 4px;
-
     display: flex;
-
     transition: border 0.2s;
+    cursor: default !important;
 
     &:hover {
       border-color: ${shade(0.2, '#e0e0e0')};

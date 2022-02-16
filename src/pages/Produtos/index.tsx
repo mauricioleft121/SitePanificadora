@@ -12,30 +12,37 @@ interface Produtos {
 }
 
 const Produtos: React.FC = () => {
-  const [width, setWidth] = useState<number>();
+  const [width, setWidth] = useState<number>(() => {
+    return window.innerWidth;
+  });
   const [Prodts, setProdts] = useState<Produtos[]>([]);
 
   useEffect(() => {
     api.get('/products').then((response) => {
       setProdts(response.data);
     });
-    setWidth(window.innerWidth);
+    const handleResize = (): void => {
+      setWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
   return (
     <>
-      {width! > 576 ? <Header /> : <MobileHeader />}
+      {width! > 768 ? <Header /> : <MobileHeader />}
 
       <Prods>
         <ul>
           {Prodts.map((prod) => (
             <ListProds key={prod.nome}>
-              <a href="teste">
+              <button type="button">
                 <img src={prod.imagem} alt={prod.nome} />
                 <div>
                   <strong>{prod.nome}</strong>
                   <p>{prod.descricao}</p>
                 </div>
-              </a>
+              </button>
             </ListProds>
           ))}
         </ul>
